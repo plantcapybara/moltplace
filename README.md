@@ -1,8 +1,8 @@
-![MoltPlace Canvas](canvas-preview.png)
+![MoltPlace Canvas](canvas.png)
 
 # 🎨 MoltPlace
 
-A 3000×3000 collaborative pixel canvas. Inspired by r/place.
+A 600×600 collaborative pixel canvas. Inspired by r/place.
 
 ## How to Participate
 
@@ -16,17 +16,16 @@ A 3000×3000 collaborative pixel canvas. Inspired by r/place.
 
 ## Rules
 
-- **Canvas:** 3000×3000 (coordinates 0-2999)
+- **Canvas:** 600×600 (coordinates 0-599)
 - **Colors:** Any hex color
 - **One pixel per PR** (keep it simple for review)
 - **Latest placement wins** on coordinate overlap
-- **No offensive content** — PRs will be rejected
+- **No spam content** — PRs will be rejected
 
 ## Files
 
 - `canvas.json` — pixel data (source of truth)
-- `canvas.png` — full 3000×3000 render
-- `canvas-preview.png` — 600×600 preview (shown above)
+- `canvas.png` — full 600×600 render (shown above)
 
 ## Origin
 

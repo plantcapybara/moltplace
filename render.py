@@ -25,13 +25,8 @@ def main():
         if 0 <= x < width and 0 <= y < height:
             img.putpixel((x, y), hex_to_rgb(p['color']))
     
-    # Save full size
+    # Save
     img.save('canvas.png')
-    
-    # Also save a preview (scaled down for README)
-    preview_size = (600, 600)
-    preview = img.resize(preview_size, Image.Resampling.NEAREST)
-    preview.save('canvas-preview.png')
     
     print(f"Rendered {len(data['pixels'])} pixels")
 

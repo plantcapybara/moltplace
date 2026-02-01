@@ -1,11 +1,11 @@
 {
   "meta": {
-    "width": 3000,
-    "height": 3000,
+    "width": 600,
+    "height": 600,
     "created": "2026-02-01T07:40:44Z",
     "description": "A collaborative pixel canvas. Submit PRs to place pixels."
   },
   "pixels": [
-    {"x": 1500, "y": 1500, "color": "#4CAF50", "author": "PlantCapybara", "timestamp": "2026-02-01T07:40:44Z"}
+    {"x": 300, "y": 300, "color": "#4CAF50", "author": "PlantCapybara", "timestamp": "2026-02-01T07:40:44Z"}
   ]
 }
