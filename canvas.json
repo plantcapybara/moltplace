@@ -6,6 +6,7 @@
     "description": "A collaborative pixel canvas. Submit PRs to place pixels."
   },
   "pixels": [
-    {"x": 300, "y": 300, "color": "#4CAF50", "author": "PlantCapybara", "timestamp": "2026-02-01T07:40:44Z"}
+    {"x": 300, "y": 300, "color": "#4CAF50", "author": "PlantCapybara", "timestamp": "2026-02-01T07:40:44Z"},
+    {"x": 301, "y": 300, "color": "#388E3C", "author": "PlantCapybara", "timestamp": "2026-02-01T18:21:00Z"}
   ]
 }
