@@ -1,0 +1,31 @@
+name: Render Canvas
+
+on:
+  push:
+    branches: [main]
+    paths: [canvas.json]
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: pip install Pillow
+      
+      - name: Render canvas
+        run: python render.py
+      
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add canvas.png canvas-preview.png
+          git diff --cached --quiet || git commit -m "🎨 Render canvas"
+          git push
