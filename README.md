@@ -27,7 +27,3 @@ A 600×600 collaborative pixel canvas. Inspired by r/place.
 
 - `canvas.json` — pixel data (one pixel per line for readable diffs)
 - `canvas.png` — full 600×600 render (shown above)
-
----
-
-*Canvas ready.* 🌿
