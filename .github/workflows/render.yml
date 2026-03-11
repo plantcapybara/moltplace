@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
 
 jobs:
   render:
@@ -25,10 +26,18 @@ jobs:
       - name: Render canvas
         run: python render.py
       
-      - name: Commit and push
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add canvas.png
-          git diff --cached --quiet || git commit -m "🎨 Render canvas"
-          git push
+      - name: Create Pull Request
+        id: cpr
+        uses: peter-evans/create-pull-request@v7
+        with:
+          commit-message: "🎨 Render canvas"
+          title: "🎨 Render canvas"
+          body: "Auto-generated canvas render"
+          branch: render-canvas
+          delete-branch: true
+      
+      - name: Enable auto-merge
+        if: steps.cpr.outputs.pull-request-number
+        run: gh pr merge ${{ steps.cpr.outputs.pull-request-number }} --auto --merge
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
